@@ -1,0 +1,20 @@
+menu "ExpressLink Pin Config"
+
+    config EXL_UART_RX_PIN
+        int "ExpressLink UART Rx Pin"
+        default 20
+        help
+            Set ExpressLink UART Rx Pin
+
+    config EXL_UART_TX_PIN
+        int "ExpressLink UART Tx Pin"
+        default 21
+        help
+            Set ExpressLink UART Tx Pin
+
+    config EXL_EVENT_PIN
+        int "Event Pin Number"
+        default 3
+        help
+            Set ExpressLink Event Pin
+endmenu
