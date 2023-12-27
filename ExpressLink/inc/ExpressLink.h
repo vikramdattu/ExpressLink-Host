@@ -99,7 +99,7 @@ typedef enum ExpressLink_state_t
 typedef struct ExpressLink_OTA_Data_t
 {
   uint32_t count;
-  uint32_t* data;
+  uint8_t* data;
   uint32_t crc;
 } ExpressLink_OTA_Data_t;
 /* USER CODE END PTD */
