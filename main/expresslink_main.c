@@ -18,6 +18,7 @@
 #include "inttypes.h"
 
 #include "ExpressLink.h"
+#include "ota.h"
 
 #define TAG "app"
 
@@ -139,6 +140,10 @@ void expresslink_get_and_process_evt(void *data)
 
                 char *ret_val = ExpressLink_MatterStart();
                 printf("Matter Start response: %s", ret_val);
+            break;
+        case EXPRESSLINK_EVENT_OTA:
+            ESP_LOGI(TAG, "[EVENT] OTA Event received");
+            vOTATask();
             break;
         default:
             // ESP_LOGW(TAG, "Unhandled event %d", event.id);
